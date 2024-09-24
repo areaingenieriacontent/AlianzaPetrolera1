@@ -281,5 +281,38 @@ namespace AlianzaPetrolera.Controllers.Admin
 
             return View();
         }
+        public ActionResult ReporteCategoriaSub14()
+        {
+            try
+            {
+                ReportViewer reportViewer = new ReportViewer()
+                {
+                    ProcessingMode = ProcessingMode.Local,
+                    SizeToReportContent = true,
+                    Width = Unit.Percentage(100),
+                    Height = Unit.Percentage(100)
+                };
+
+                DataCategoria.MatriculasSub14DataTable data2 = new DataCategoria.MatriculasSub14DataTable();
+                MatriculasSub14TableAdapter adapter = new MatriculasSub14TableAdapter();
+                adapter.Fill(data2);
+                if (data2 != null && data2.Rows.Count > 0)
+                {
+                    reportViewer.LocalReport.DataSources.Add(new ReportDataSource("ReportCateSub14", data2.CopyToDataTable()));
+                    reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"\RPTReports\ReportCateSub14.rdlc.";
+                    ViewBag.ReportViewer = reportViewer;
+                }
+                else
+                {
+                    ViewBag.TextError = "No hay datos validos para este reporte";
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.TextError = ex.Message;
+            }
+
+            return View();
+        }
     }
 }

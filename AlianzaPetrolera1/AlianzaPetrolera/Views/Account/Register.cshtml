@@ -120,14 +120,25 @@
                             <div class="col-sm-12">
                                 @Html.TextBoxFor(m => m.Pers_Dir)
                             </div>
+                            <br />
+                            <div class="col-sm-12">
+                                <spam class="btn btn-warning">
+                                    <input type="checkbox" id="condiciones" />
+                                    <a class="btn btn-warning" href="~/Content/TERMINOS Y CONDICIONES.pdf" target="_blank" >Acepto Términos y Condiciones</a>
+                                </spam>
+                            </div>
+                            </div>
+
                         </div>
-                    </div>
+
                 </div>
+
             </div>
             <hr />
             <div class="row">
                 <div class="col-md-5">
-                    <input type="submit" class="btn btn-warning" value="Registrarse" />
+                    <input type="button" class="btn btn-warning" onclick="validar()" value="Registrarse" />
+                    <input type="submit" style="display:none" value="" id="enviar" />
                 </div>
                 <div class="col-md-6">
                     <a href="~/Home/Index"><input type="button" class="btn btn-warning centrar-contenido" value="Volver"/></a>
@@ -136,8 +147,25 @@
          }
     </div>
 </div>
+<script>
 
+    function validar(){
+    if (document.getElementById('condiciones').checked){
+
+        var enviar = document.getElementById('enviar');
+        console.log("hola");
+        enviar.click();
+        return true;
+    }
+    else
+    {
+    alert("El formulario no puede ser envia si no acepta el contrato");
+    return false;
+    }
+    }
+</script>
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryval")  
+
 
 }

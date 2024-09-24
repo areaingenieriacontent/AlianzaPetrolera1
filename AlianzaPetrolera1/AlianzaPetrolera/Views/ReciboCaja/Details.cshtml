@@ -26,16 +26,17 @@
                 <table class="tabla-detal-inscp">
 
                     <tr><th><b>@Html.DisplayNameFor(model => model.Reci_Num)</b></th><td>  @Html.DisplayFor(model => model.Reci_Num) </td></tr>
+                    <tr><th><b>@Html.DisplayNameFor(model => model.Mes_Pago) </b></th><td>@Html.DisplayFor(model => model.Mes_Pago) </td></tr>
                     <tr><th><b>@Html.DisplayNameFor(model => model.Reci_NomUs) </b></th><td>@Html.DisplayFor(model => model.Reci_NomUs) </td></tr>
                     <tr><th><b>@Html.DisplayNameFor(model => model.Reci_ApeUs) </b></th><td>@Html.DisplayFor(model => model.Reci_ApeUs) </td></tr>
                     <tr><th><b>@Html.DisplayNameFor(model => model.Reci_DocUs) </b></th><td>@Html.DisplayFor(model => model.Reci_DocUs) </td></tr>
                     <tr><th><b>@Html.DisplayNameFor(model => model.Reci_CateUs)</b></th><td>@Html.DisplayFor(model => model.Reci_CateUs)</td></tr>
                     <tr><th><b>Fecha Generación </b></th><td>@Html.DisplayFor(model => model.Matr_Fecha) </td></tr>
-                    
+
                     @*<tr><th><b>@Html.DisplayNameFor(model => model.Costo_Matri)</b></th><td>@Html.DisplayFor(model => model.Costo_Matri)</td></tr>
-                <tr><th><b>@Html.DisplayNameFor(model => model.Costo_Poli) </b></th><td>@Html.DisplayFor(model => model.Costo_Poli) </td></tr>
-                <tr><th><b>@Html.DisplayNameFor(model => model.Costo_Unif) </b></th><td>@Html.DisplayFor(model => model.Costo_Unif) </td></tr>
-                <tr><th><b>@Html.DisplayNameFor(model => model.Costo_Mensu)</b></th><td>@Html.DisplayFor(model => model.Costo_Mensu)</td></tr>*@
+        <tr><th><b>@Html.DisplayNameFor(model => model.Costo_Poli) </b></th><td>@Html.DisplayFor(model => model.Costo_Poli) </td></tr>
+        <tr><th><b>@Html.DisplayNameFor(model => model.Costo_Unif) </b></th><td>@Html.DisplayFor(model => model.Costo_Unif) </td></tr>
+        <tr><th><b>@Html.DisplayNameFor(model => model.Costo_Mensu)</b></th><td>@Html.DisplayFor(model => model.Costo_Mensu)</td></tr>*@
 
                 </table>
             </div>
@@ -46,6 +47,7 @@
                     <tr><th><b>Costo Póliza  </b></th><td>@Html.DisplayFor(model => model.Desc_Poli)  </td></tr>
                     <tr><th><b>Costo Uniforme  </b></th><td>@Html.DisplayFor(model => model.Desc_Unif)  </td></tr>
                     <tr><th><b>Costo Mensualidad </b></th><td>@Html.DisplayFor(model => model.Desc_Mensu) </td></tr>
+                    <tr><th><b>Abonos u Otros </b></th><td>@Html.DisplayFor(model => model.Abonos_Otros) </td></tr>
                     <tr><th><b>Costo Total</b></th><td>@Html.DisplayFor(model => model.Matri_CosTota)</td></tr>
                 </table>
             </div>

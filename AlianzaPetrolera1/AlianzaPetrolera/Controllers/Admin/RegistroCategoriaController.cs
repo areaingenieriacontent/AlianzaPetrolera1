@@ -91,7 +91,7 @@ namespace AlianzaPetrolera.Controllers.Admin
                     db.Categorias.Add(Categorias);
                     db.SaveChanges();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index","home");
                 }
                 return View(Categorias);
             }
@@ -125,7 +125,7 @@ namespace AlianzaPetrolera.Controllers.Admin
 
 
         // GET: RegistroPersona/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
             var item = db.Categorias.Where(x => x.Cate_Id == id).First();
             return View(item);
@@ -133,20 +133,21 @@ namespace AlianzaPetrolera.Controllers.Admin
 
         // POST: RegistroPersona/Edit/5
         [HttpPost]
-        public ActionResult Edit(string id, FormCollection collection, Categoria model)
+        public ActionResult Edit(int? id, FormCollection collection, Categoria model)
         {
             try
             {
                 // TODO: Add update logic here
                 var item = db.Categorias.Where(x => x.Cate_Id == model.Cate_Id).First();
                 item.Cate_Id = model.Cate_Id;
+                item.Cate_Name = model.Cate_Name;
 
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "home");
             }
             catch
             {
-                return View();
+                return RedirectToAction("Index", "home");
             }
         }
 

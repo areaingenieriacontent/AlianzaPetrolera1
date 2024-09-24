@@ -55,7 +55,27 @@
                             @Html.LabelFor(model => model.Reci_Num, htmlAttributes: new { @class = "control-label col-md-4" })
                             @Html.EditorFor(model => model.Reci_Num, new { htmlAttributes = new { @class = "control-label col-md-3", @Style = "border:none", @Value = @Session["maxrecibo"], @ReadOnly = "readonly" } })
                             @Html.ValidationMessageFor(model => model.Reci_Num, "", new { @class = "text-danger" })
+
                         </p>
+                                            <div class="col-sm-4">
+                        <select name="pago_mes" style="width:21em;" id="pago_mes" onchange="changesbank();">
+                            <option selected value="Mes"> Mes a Pagar </option>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+
+                    </div>
+
                     </div>
                 </div>
                 <hr />
@@ -100,7 +120,7 @@
                     </div>
                 </div>
                 <hr />
-                <!--Campos ocultos para almacenar datos Modo de pago y Banco-->
+                <!--Campos ocultos para almacenar datos Modo de pago , Banco y Mes-->
                 <div class="row" hidden>
                     <div class="form-group col-sm-8">
                         @Html.LabelFor(model => model.Reci_Mpago, htmlAttributes: new { @class = "control-label text-center" })
@@ -114,6 +134,13 @@
                         <div class="">
                             @Html.EditorFor(model => model.Banco_Id, new { htmlAttributes = new { @class = "form-control", @Value = @Session["Banco"], @name = "Banco" } })
                             @Html.ValidationMessageFor(model => model.Banco_Id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        @Html.LabelFor(model => model.Mes_Pago, htmlAttributes: new { @class = "control-label text-center" })
+                        <div class="">
+                            @Html.EditorFor(model => model.Mes_Pago, new { htmlAttributes = new { @class = "form-control", @Value = @Session["pago_mes"], @name = "pago_mes" } })
+                            @Html.ValidationMessageFor(model => model.Mes_Pago, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
@@ -153,7 +180,7 @@
                     <!--Campos sobre los valores estipulados para los items en el recibo-->
                     <form method="post">
                         <div class="row">
-                            <div class="col-sm-3 pago">
+                            <div class="col-sm-2 pago">
                                 <h6 style="left:10%; font-weight:bold;">Matrícula</h6>
                                 @Html.EditorFor(model => model.Costo_Matri, new { htmlAttributes = new { @class = "control-label", @Value = @Session["matricula"], @Name = "value1", @ReadOnly = "ReadOnly", @Id = "Matricula", @onkeyup = "sumar();", @Style = "text-align: center;" } })
                                 @Html.ValidationMessageFor(model => model.Costo_Matri, "", new { @class = "text-danger" })
@@ -167,7 +194,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-3 pago">
+                            <div class="col-sm-2 pago">
                                 <h6>Uniforme</h6>
                                 <div class="">
                                     @Html.EditorFor(model => model.Costo_Unif, new { htmlAttributes = new { @class = "control-label", @Value = @Session["uniforme"], @Name = "value5", @ReadOnly = "ReadOnly", @Id = "Uniforme", @onkeyup = "sumar();", @Style = "text-align: center;" } })
@@ -175,19 +202,26 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-3 pago">
+                            <div class="col-sm-2 pago">
                                 <h6>Mensualidad</h6>
                                 <div class="">
                                     @Html.EditorFor(model => model.Costo_Mensu, new { htmlAttributes = new { @class = "control-label", @Value = @Session["mensualidad"], @Name = "value7", @ReadOnly = "ReadOnly", @Id = "Mensualidad", @onkeyup = "sumar();", @Style = "text-align: center;" } })
                                     @Html.ValidationMessageFor(model => model.Costo_Mensu, "", new { @class = "text-danger" })
                                 </div>
                             </div>
+                            <div class="col-sm-2 pago">
+                                <h6>Abonos u Otros</h6>
+                                <div class="">
+                                    @Html.EditorFor(model => model.Abonos_Otros, new { htmlAttributes = new { @class = "control-label", @Value = @Session["Abonos"], @Name = "value9", @Id = "Abonosuotros", @onkeyup = "sumar();", @Style = "text-align: center;" } })
+                                    @Html.ValidationMessageFor(model => model.Abonos_Otros, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
                         </div>
                         <!--Campos sobre los decuentos estipulados para los items en el recibo-->
                         <br />
                         <div class="row">
-                            <div class="col-sm-3 pago">
-                                <select name="value2" style="width:13em;" id="DescMatri" onchange="sumar();">
+                            <div class="col-sm-2 pago">
+                                <select name="value2" style="width:100%;" id="DescMatri" onchange="sumar();">
                                     <option selected value="0"> Descuento </option>
                                     <option value="0">0%</option>
                                     <option value="5">5%</option>
@@ -198,7 +232,7 @@
                                 </select>
                             </div>
                             <div class="col-sm-3 pago">
-                                <select name="value4" style="width:13em;" id="DescPoli" onchange="sumar();">
+                                <select name="value4" style="width:100%;" id="DescPoli" onchange="sumar();">
                                     <option selected value="0"> Descuento </option>
                                     <option value="0">0%</option>
                                     <option value="5">5%</option>
@@ -208,8 +242,8 @@
                                     <option value="100">100%</option>
                                 </select>
                             </div>
-                            <div class="col-sm-3 pago">
-                                <select name="value6" style="width:13em;" id="DescUnif" onchange="sumar();">
+                            <div class="col-sm-2 pago">
+                                <select name="value6" style="width:100%;" id="DescUnif" onchange="sumar();">
                                     <option selected value="0"> Descuento </option>
                                     <option value="0">0%</option>
                                     <option value="5">5%</option>
@@ -219,8 +253,8 @@
                                     <option value="100">100%</option>
                                 </select>
                             </div>
-                            <div class="col-sm-3 pago">
-                                <select name="value8" style="width:13em;" id="DescMensu" onchange="sumar();">
+                            <div class="col-sm-2 pago">
+                                <select name="value8" style="width:100%;" id="DescMensu" onchange="sumar();">
                                     <option selected value="0"> Descuento </option>
                                     <option value="0">0%</option>
                                     <option value="5">5%</option>
@@ -232,16 +266,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3 pago">
+                            <div class="col-sm-2 pago">
                                 <label> @Session["MySessionVariable5"] %</label>
                             </div>
                             <div class="col-sm-3 pago">
                                 <label> @Session["MySessionVariable6"] %</label>
                             </div>
-                            <div class="col-sm-3 pago">
+                            <div class="col-sm-2 pago">
                                 <label> @Session["MySessionVariable7"] %</label>
                             </div>
-                            <div class="col-sm-3 pago">
+                            <div class="col-sm-2 pago">
                                 <label> @Session["MySessionVariable8"] %</label>
                             </div>
                         </div>
@@ -278,6 +312,7 @@
                                     @Html.ValidationMessageFor(model => model.Desc_Mensu, "", new { @class = "text-danger" })
                                 </div>
                             </div>
+
                         </div>
                         <!--Costo total de la factura-->
                         <div class="form-group col-sm-12 pago">
@@ -292,7 +327,7 @@
                         <div class="form">
                             <div class="col-md-10">
                                 <h6>Observaciones:</h6>
-                                @Html.TextAreaFor(m => m.Reci_Obse, new { @class = "form-control", @style = "margin: 0px -146.75px 0px 0px;height: 100px;width: 120%;", @Value = @Session["observacion"], @name = "observacion", @Id= "Text1", @onkeyup = "Agregar();" })
+                                @Html.TextAreaFor(m => m.Reci_Obse, new { @class = "form-control", @style = "margin: 0px -146.75px 0px 0px;height: 100px;width: 120%;", @Value = @Session["observacion"], @name = "observacion", @Id = "Text1", @onkeyup = "Agregar();" })
                                 @Html.ValidationMessageFor(model => model.Reci_Obse, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -361,6 +396,7 @@
             $("#calc").click(function () {
                 $(this).fadeOut(3000);
                 $("textarea").fadeIn(2000);
+
             });
 
         </script>

@@ -260,6 +260,18 @@
     <Compile Include="Migrations\201907252152218_tres.Designer.cs">
       <DependentUpon>201907252152218_tres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911251810545_cuatro.cs" />
+    <Compile Include="Migrations\201911251810545_cuatro.Designer.cs">
+      <DependentUpon>201911251810545_cuatro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911251833590_cinco.cs" />
+    <Compile Include="Migrations\201911251833590_cinco.Designer.cs">
+      <DependentUpon>201911251833590_cinco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912041453515_terminos y condciones.cs" />
+    <Compile Include="Migrations\201912041453515_terminos y condciones.Designer.cs">
+      <DependentUpon>201912041453515_terminos y condciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin\Banco.cs" />
@@ -276,6 +288,9 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPTDataSet\DataCategoria.cs">
+      <DependentUpon>DataCategoria.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RPTDataSet\DataCategoria.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -503,6 +518,7 @@
     <Content Include="Views\Report\ReporteCategoriaInfantil.cshtml" />
     <Content Include="Views\Report\ReporteRecibopdf.cshtml" />
     <Content Include="Views\Report\ReporteReciboCreate.cshtml" />
+    <Content Include="Views\Report\ReporteCategoriaSub14.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts\" />
@@ -523,6 +539,16 @@
     <EmbeddedResource Include="Migrations\201907252152218_tres.resx">
       <DependentUpon>201907252152218_tres.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911251810545_cuatro.resx">
+      <DependentUpon>201911251810545_cuatro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911251833590_cinco.resx">
+      <DependentUpon>201911251833590_cinco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912041453515_terminos y condciones.resx">
+      <DependentUpon>201912041453515_terminos y condciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTReports\ReportCateSub14.rdlc" />
     <EmbeddedResource Include="RPTReports\ReportCateBaby.rdlc" />
     <EmbeddedResource Include="RPTReports\ReportCateInfantil.rdlc" />
     <EmbeddedResource Include="RPTReports\ReportCatePreBaby.rdlc" />

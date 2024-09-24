@@ -85,20 +85,21 @@ namespace AlianzaPetrolera.Controllers.Admin
             Session["MySessionVariable3"] = nombrecate;
             Session["MySessionVariable9"] = documentoestud;
             Session["MySessionVariable1"] = apellidoes;
-            Session["matricula"] = 80000;
+            Session["matricula"] = 90000;
             Session["poliza"] = 10000;
-            Session["uniforme"] = 50000;
-            Session["mensualidad"] = 80000;
+            Session["uniforme"] = 60000;
+            Session["mensualidad"] = 90000;
             Session["ModoPago"] = ModoPago;
             Session["Banco"] = Banco;
             Session["observacion"] = observacion;
+            Session["Abonos"] = 0;
             return View();
         }      
 
         // POST: Recibo/Create
         [HttpPost]
-        public ActionResult Create(ReciboCaja ReciboCajas, float value1, float value2, float value3, float value4, float value5, float value6, float value7, float value8, String calc,string nombrecate, 
-                                    string nombreestu, string idcod, string documentoestud, string apellidoes, string ModoPago, string Banco, string observacion, int id, int? MaxNum)
+        public ActionResult Create(ReciboCaja ReciboCajas, float value1, float value2, float value3, float value4, float value5, float value6, float value7, float value8,float value9, String calc,string nombrecate, 
+                                    string nombreestu, string idcod, string documentoestud, string apellidoes, string ModoPago, string Banco, string observacion,string pago_mes, int id, int? MaxNum)
         {
             Session["maxrecibo"] = NumRecibo(MaxNum);
             Session["MySessionVariable"] = nombreestu;
@@ -111,9 +112,11 @@ namespace AlianzaPetrolera.Controllers.Admin
             Session["MySessionVariable7"] = value6;
             Session["MySessionVariable8"] = value8;
             Session["ModoPago"] = ModoPago;
+            Session["pago_mes"] = pago_mes;          
             Session["Banco"] = Banco;
-            Session["observacion"] = observacion; 
-            
+            Session["observacion"] = observacion;
+
+
             try
             {
                 if (ModelState.IsValid)
@@ -126,13 +129,15 @@ namespace AlianzaPetrolera.Controllers.Admin
                     float totalp = 0;
                     float totalu = 0;
                     float totalme = 0;
+                    float abonostotal = 0;
                     float totalpago = 0;
 
+                    abonostotal = c.AbonosUotros(value9);
                     totalma = c.Matricula(value1, value2);
                     totalp = c.Poliac(value3, value4);
                     totalu = c.Uniforme(value5, value6);
                     totalme = c.Mensualidad(value7, value8);
-                    totalpago = (totalma + totalp + totalu + totalme);
+                    totalpago = (totalma + totalp + totalu + totalme+abonostotal);
 
                     //Variables para almacenar los datos en el pdf que se imprime
                     Session["MySessionVariable4"] = totalpago;
@@ -140,27 +145,31 @@ namespace AlianzaPetrolera.Controllers.Admin
                     Session["MySessionVariable6"] = value4;
                     Session["MySessionVariable7"] = value6;
                     Session["MySessionVariable8"] = value8;
-                    Session["matricula"] = 80000;
+                    Session["matricula"] = 90000;
                     Session["poliza"] = 10000;
-                    Session["uniforme"] = 50000;
-                    Session["mensualidad"] = 80000;
+                    Session["uniforme"] = 60000;
+                    Session["mensualidad"] = 90000;
                     Session["CosMatri"] = totalma;
                     Session["CosPoli"] = totalp;
                     Session["CosUnif"] = totalu;
                     Session["CosMensu"] = totalme;
+                    Session["Abonos"] = abonostotal;
+
 
                     //Registro de datos en la tabla recibo
-                    r.Reci_Id = ReciboCajas.Reci_Id;
-                    r.Costo_Matri = totalma;
-                    r.Costo_Poli = totalp;
-                    r.Costo_Unif = totalu;
-                    r.Costo_Mensu = totalme;
-                    r.Desc_Matri = value2;
-                    r.Desc_Poli = value4;
-                    r.Desc_Unif = value6;
-                    r.Desc_Mensu = value8;
-                    r.Matri_CosTota = totalpago;
-                    r.Reci_Obse = observacion;
+                    ReciboCajas.Reci_Id = ReciboCajas.Reci_Id;
+                    ReciboCajas.Costo_Matri = 90000;
+                    ReciboCajas.Costo_Poli = 10000;
+                    ReciboCajas.Costo_Unif = 60000;
+                    ReciboCajas.Costo_Mensu = 90000;
+                    ReciboCajas.Desc_Matri = totalma;
+                    ReciboCajas.Desc_Poli = totalp;
+                    ReciboCajas.Desc_Unif = totalu;
+                    ReciboCajas.Desc_Mensu = totalme;
+                    ReciboCajas.Matri_CosTota = totalpago;
+                    ReciboCajas.Abonos_Otros = abonostotal;
+                    ReciboCajas.Mes_Pago = pago_mes;
+                    
 
                     db.RecibosCajas.Add(ReciboCajas);
                     db.SaveChanges();

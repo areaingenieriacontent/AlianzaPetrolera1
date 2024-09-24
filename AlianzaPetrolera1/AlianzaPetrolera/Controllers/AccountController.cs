@@ -171,10 +171,11 @@ namespace AlianzaPetrolera.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirmar cuenta", "Para confirmar la cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>");
-                    SendEmail(model.Email + " " + model.Email, model.Email, model.Email);
+                    SendEmail(model.Pers_Nom + " " + model.Pers_Lstn1, model.Email, model.UserName);
                   
 
                     return RedirectToAction("BienvenidaPadre", "Admin",new { roles=model.RolP_Id });
+
                     }
                 
                 
@@ -190,22 +191,20 @@ namespace AlianzaPetrolera.Controllers
             return View(model);
         }
 
-      
-
         private void SendEmail(string NameUser, string Email, string Usuario)
         {
             MailMessage solicitud = new MailMessage();
-            solicitud.Subject = "Bienvenida a la familia";
+            solicitud.Subject = "Bienvenida a la Academia Alianza Petrolera";
             solicitud.Body = "Cordial saludo " + "<br/>" +
                 "Sr(a). " + NameUser + "<br/>" +
-               "<br/>" + "Es un placer darle la bienvenida a la Plataforma " +
+               "<br/>" + "Es un placer darle la bienvenida a la Plataforma Academia Alianza Petrolera " +
                "<br/>" + "Ingrese y comience con su proceso " +
                "<br/>" +
                "<br/>" + "Tus datos de accesos son los siguientes" +
                "<br/>" +
-               "<br/>" + "Usuario: " + Usuario +
-               "<br/>" + "Contraseña: " + Usuario +
-            "<br/>" + "link:" + "https://www.aprendeyavanza2.com.co/Gastronomia/" +
+               "<br/>" + "Usuario: " + Usuario + 
+               "<br/>" + "Recuerde que su contraseña es la ingresada al momento de registrarse " +
+            "<br/>" + "link: " + "<a href='https://www.aprendeyavanza2.com.co/AlianzaPetroleraV1/'>https://www.aprendeyavanza2.com.co/AlianzaPetroleraV1/'</a>" +
             "<br/>" +
             "<br/>" + "¡Éxitos!" +
             "<br/>" +

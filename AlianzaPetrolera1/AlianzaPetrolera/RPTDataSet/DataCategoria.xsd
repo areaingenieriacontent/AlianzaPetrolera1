@@ -4,13 +4,13 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConexAlianzapetroleV2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConexAlianzapetroleV2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConexAlianzapetroleV2.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConexAlianzapetroleV2" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConexAlianzapetroleV2 (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConexAlianzapetroleV2.ConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConexAlianzapetroleV2snies" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConexAlianzapetroleV2snies (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConexAlianzapetroleV2snies.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatriculasSemillerosTableAdapter" GeneratorDataComponentClassName="MatriculasSemillerosTableAdapter" Name="MatriculasSemilleros" UserDataComponentName="MatriculasSemillerosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPruebas.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPetrolera.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Matriculas] WHERE (([Matri_Id] = @Original_Matri_Id))</CommandText>
@@ -23,7 +23,8 @@
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Matri_Id, Mat_Nom, Mat_Apel, Mat_Doc, Matr_Fecha, Cate_Id, Matri_Esta
 FROM            Matriculas
-WHERE        (Cate_Id = N'Semilleros (4 y 5 años)') AND (Matri_Esta = 1)</CommandText>
+WHERE        (Cate_Id = N'SUB 4   2016-2017') 
+</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -56,7 +57,7 @@ WHERE        (Cate_Id = N'Semilleros (4 y 5 años)') AND (Matri_Esta = 1)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatriculasPreBabyTableAdapter" GeneratorDataComponentClassName="MatriculasPreBabyTableAdapter" Name="MatriculasPreBaby" UserDataComponentName="MatriculasPreBabyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPruebas.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPetrolera.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Matriculas] WHERE (([Matri_Id] = @Original_Matri_Id))</CommandText>
@@ -69,7 +70,7 @@ WHERE        (Cate_Id = N'Semilleros (4 y 5 años)') AND (Matri_Esta = 1)</Comma
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Matri_Id, Mat_Nom, Mat_Apel, Mat_Doc, Matr_Fecha, Cate_Id, Matri_Esta
 FROM            Matriculas
-WHERE        (Cate_Id = N'Pre-Baby (6 Y 7 años)') AND (Matri_Esta = 1)</CommandText>
+WHERE        (Cate_Id = N'SUB 6   2014-2015')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -102,7 +103,7 @@ WHERE        (Cate_Id = N'Pre-Baby (6 Y 7 años)') AND (Matri_Esta = 1)</Command
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatriculasBabyTableAdapter" GeneratorDataComponentClassName="MatriculasBabyTableAdapter" Name="MatriculasBaby" UserDataComponentName="MatriculasBabyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPruebas.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPetrolera.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Matriculas] WHERE (([Matri_Id] = @Original_Matri_Id))</CommandText>
@@ -115,7 +116,7 @@ WHERE        (Cate_Id = N'Pre-Baby (6 Y 7 años)') AND (Matri_Esta = 1)</Command
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Matri_Id, Mat_Nom, Mat_Apel, Mat_Doc, Matr_Fecha, Cate_Id, Matri_Esta
 FROM            Matriculas
-WHERE        (Cate_Id = N'Baby (8 y 9 años)') AND (Matri_Esta = 1)</CommandText>
+WHERE        (Cate_Id = N'SUB 8   2012-2013')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -148,7 +149,7 @@ WHERE        (Cate_Id = N'Baby (8 y 9 años)') AND (Matri_Esta = 1)</CommandText
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatriculasPreInfantilTableAdapter" GeneratorDataComponentClassName="MatriculasPreInfantilTableAdapter" Name="MatriculasPreInfantil" UserDataComponentName="MatriculasPreInfantilTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPruebas.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPetrolera.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Matriculas] WHERE (([Matri_Id] = @Original_Matri_Id))</CommandText>
@@ -161,7 +162,7 @@ WHERE        (Cate_Id = N'Baby (8 y 9 años)') AND (Matri_Esta = 1)</CommandText
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Matri_Id, Mat_Nom, Mat_Apel, Mat_Doc, Matr_Fecha, Cate_Id, Matri_Esta
 FROM            Matriculas
-WHERE        (Cate_Id = N'Pre-Infantil (10 y 11 años)') AND (Matri_Esta = 1)</CommandText>
+WHERE        (Cate_Id = N'SUB 10  2010-2011') </CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -194,7 +195,7 @@ WHERE        (Cate_Id = N'Pre-Infantil (10 y 11 años)') AND (Matri_Esta = 1)</C
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatriculasInfantilTableAdapter" GeneratorDataComponentClassName="MatriculasInfantilTableAdapter" Name="MatriculasInfantil" UserDataComponentName="MatriculasInfantilTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPruebas.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPetrolera.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [Matriculas] WHERE (([Matri_Id] = @Original_Matri_Id))</CommandText>
@@ -207,7 +208,53 @@ WHERE        (Cate_Id = N'Pre-Infantil (10 y 11 años)') AND (Matri_Esta = 1)</C
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Matri_Id, Mat_Nom, Mat_Apel, Mat_Doc, Matr_Fecha, Cate_Id, Matri_Esta
 FROM            Matriculas
-WHERE        (Cate_Id = N'Infantil (12 y 13 años)') AND (Matri_Esta = 1)</CommandText>
+WHERE        (Cate_Id = N'SUB 12  2008-2009')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Matriculas] SET [Mat_Nom] = @Mat_Nom, [Mat_Apel] = @Mat_Apel, [Mat_Doc] = @Mat_Doc, [Matr_Fecha] = @Matr_Fecha, [Cate_Id] = @Cate_Id, [Matri_Esta] = @Matri_Esta WHERE (([Matri_Id] = @Original_Matri_Id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Mat_Nom" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mat_Nom" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Mat_Apel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mat_Apel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Mat_Doc" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mat_Doc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Matr_Fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Matr_Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Cate_Id" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Cate_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Matri_Esta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Matri_Esta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Matri_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Matri_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Matri_Id" DataSetColumn="Matri_Id" />
+              <Mapping SourceColumn="Mat_Nom" DataSetColumn="Mat_Nom" />
+              <Mapping SourceColumn="Mat_Apel" DataSetColumn="Mat_Apel" />
+              <Mapping SourceColumn="Mat_Doc" DataSetColumn="Mat_Doc" />
+              <Mapping SourceColumn="Matr_Fecha" DataSetColumn="Matr_Fecha" />
+              <Mapping SourceColumn="Cate_Id" DataSetColumn="Cate_Id" />
+              <Mapping SourceColumn="Matri_Esta" DataSetColumn="Matri_Esta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatriculasSub14TableAdapter" GeneratorDataComponentClassName="MatriculasSub14TableAdapter" Name="MatriculasSub14" UserDataComponentName="MatriculasSub14TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConexAlianzapetroleV2snies (Web.config)" DbObjectName="AlianzaPetrolera.dbo.Matriculas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Matriculas] WHERE (([Matri_Id] = @Original_Matri_Id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Matri_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Matri_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Matri_Id, Mat_Nom, Mat_Apel, Mat_Doc, Matr_Fecha, Cate_Id, Matri_Esta
+FROM            Matriculas
+WHERE        (Cate_Id = N'SUB 14  2006-2007')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -431,6 +478,43 @@ WHERE        (Cate_Id = N'Infantil (12 y 13 años)') AND (Matri_Esta = 1)</Comma
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="MatriculasSub14" msprop:Generator_TableClassName="MatriculasSub14DataTable" msprop:Generator_TableVarName="tableMatriculasSub14" msprop:Generator_RowChangedName="MatriculasSub14RowChanged" msprop:Generator_TablePropName="MatriculasSub14" msprop:Generator_RowDeletingName="MatriculasSub14RowDeleting" msprop:Generator_RowChangingName="MatriculasSub14RowChanging" msprop:Generator_RowEvHandlerName="MatriculasSub14RowChangeEventHandler" msprop:Generator_RowDeletedName="MatriculasSub14RowDeleted" msprop:Generator_RowClassName="MatriculasSub14Row" msprop:Generator_UserTableName="MatriculasSub14" msprop:Generator_RowEvArgName="MatriculasSub14RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Matri_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMatri_Id" msprop:Generator_ColumnPropNameInRow="Matri_Id" msprop:Generator_ColumnPropNameInTable="Matri_IdColumn" msprop:Generator_UserColumnName="Matri_Id" type="xs:int" />
+              <xs:element name="Mat_Nom" msprop:Generator_ColumnVarNameInTable="columnMat_Nom" msprop:Generator_ColumnPropNameInRow="Mat_Nom" msprop:Generator_ColumnPropNameInTable="Mat_NomColumn" msprop:Generator_UserColumnName="Mat_Nom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mat_Apel" msprop:Generator_ColumnVarNameInTable="columnMat_Apel" msprop:Generator_ColumnPropNameInRow="Mat_Apel" msprop:Generator_ColumnPropNameInTable="Mat_ApelColumn" msprop:Generator_UserColumnName="Mat_Apel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mat_Doc" msprop:Generator_ColumnVarNameInTable="columnMat_Doc" msprop:Generator_ColumnPropNameInRow="Mat_Doc" msprop:Generator_ColumnPropNameInTable="Mat_DocColumn" msprop:Generator_UserColumnName="Mat_Doc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Matr_Fecha" msprop:Generator_ColumnVarNameInTable="columnMatr_Fecha" msprop:Generator_ColumnPropNameInRow="Matr_Fecha" msprop:Generator_ColumnPropNameInTable="Matr_FechaColumn" msprop:Generator_UserColumnName="Matr_Fecha" type="xs:dateTime" />
+              <xs:element name="Cate_Id" msprop:Generator_ColumnVarNameInTable="columnCate_Id" msprop:Generator_ColumnPropNameInRow="Cate_Id" msprop:Generator_ColumnPropNameInTable="Cate_IdColumn" msprop:Generator_UserColumnName="Cate_Id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Matri_Esta" msprop:Generator_ColumnVarNameInTable="columnMatri_Esta" msprop:Generator_ColumnPropNameInRow="Matri_Esta" msprop:Generator_ColumnPropNameInTable="Matri_EstaColumn" msprop:Generator_UserColumnName="Matri_Esta" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -451,6 +535,10 @@ WHERE        (Cate_Id = N'Infantil (12 y 13 años)') AND (Matri_Esta = 1)</Comma
     </xs:unique>
     <xs:unique name="MatriculasInfantil_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:MatriculasInfantil" />
+      <xs:field xpath="mstns:Matri_Id" />
+    </xs:unique>
+    <xs:unique name="MatriculasSub14_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MatriculasSub14" />
       <xs:field xpath="mstns:Matri_Id" />
     </xs:unique>
   </xs:element>

@@ -48,7 +48,8 @@ namespace AlianzaPetrolera.Models
         [Display(Name = "Ciudad")]
         public Ubic Ubic_Id { get; set; }
 
-
+        [Display(Name = "Terminos y Condicones")]
+        public int Term_Cond { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

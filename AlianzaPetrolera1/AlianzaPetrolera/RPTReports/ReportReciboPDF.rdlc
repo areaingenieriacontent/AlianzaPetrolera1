@@ -875,9 +875,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>0.33459cm</Top>
-            <Left>0.41786cm</Left>
+            <Left>0.41795cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>1.97625cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -893,7 +893,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.11396cm</Width>
+                  <Width>1.97625cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -909,7 +909,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>$80.000</Value>
+                                  <Value>=Fields!Costo_Matri.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -961,10 +961,11 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <DataSetName>DataReciboPDF</DataSetName>
             <Top>1.11097cm</Top>
-            <Left>0.41784cm</Left>
+            <Left>0.41793cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>1.97625cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1150,7 +1151,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.11396cm</Width>
+                  <Width>1.97625cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1225,9 +1226,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataReciboPDF</DataSetName>
             <Top>2.55792cm</Top>
-            <Left>0.41789cm</Left>
+            <Left>0.41798cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>1.97625cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -1255,9 +1256,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>1.85209cm</Top>
-            <Left>12.16264cm</Left>
+            <Left>8.86034cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.14042cm</Width>
+            <Width>2.24084cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -1290,9 +1291,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>1.85209cm</Top>
-            <Left>8.4952cm</Left>
+            <Left>6.62829cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>2.05563cm</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -1325,7 +1326,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>1.85209cm</Top>
-            <Left>4.17232cm</Left>
+            <Left>2.57062cm</Left>
             <Height>0.6cm</Height>
             <Width>3.88125cm</Width>
             <ZIndex>9</ZIndex>
@@ -1360,9 +1361,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>1.85209cm</Top>
-            <Left>0.41788cm</Left>
+            <Left>0.41797cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>1.97625cm</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -1395,9 +1396,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>0.33459cm</Top>
-            <Left>12.16261cm</Left>
+            <Left>8.8603cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.14042cm</Width>
+            <Width>2.24084cm</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -1430,9 +1431,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>0.33459cm</Top>
-            <Left>8.49518cm</Left>
+            <Left>6.62827cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>2.05563cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -1465,7 +1466,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox46</rd:DefaultName>
             <Top>0.33459cm</Top>
-            <Left>4.17229cm</Left>
+            <Left>2.57059cm</Left>
             <Height>0.6cm</Height>
             <Width>3.88125cm</Width>
             <ZIndex>13</ZIndex>
@@ -1484,7 +1485,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.14042cm</Width>
+                  <Width>2.24084cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1500,7 +1501,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>$80.000</Value>
+                                  <Value>=Fields!Costo_Mensu.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1534,6 +1535,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1552,10 +1554,11 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <DataSetName>DataReciboPDF</DataSetName>
             <Top>1.11097cm</Top>
-            <Left>12.1626cm</Left>
+            <Left>8.8603cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.14042cm</Width>
+            <Width>2.24084cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -1567,7 +1570,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.11396cm</Width>
+                  <Width>2.05563cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1583,7 +1586,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>$50.000</Value>
+                                  <Value>=Fields!Costo_Unif.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1635,10 +1638,11 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <DataSetName>DataReciboPDF</DataSetName>
             <Top>1.11097cm</Top>
-            <Left>8.49517cm</Left>
+            <Left>6.62826cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>2.05563cm</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
@@ -1666,7 +1670,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>$10.000</Value>
+                                  <Value>=Fields!Costo_Poli.Value</Value>
                                   <Style>
                                     <Format>n1</Format>
                                   </Style>
@@ -1720,8 +1724,9 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <DataSetName>DataReciboPDF</DataSetName>
             <Top>1.11097cm</Top>
-            <Left>4.17228cm</Left>
+            <Left>2.57058cm</Left>
             <Height>0.6cm</Height>
             <Width>3.88125cm</Width>
             <ZIndex>16</ZIndex>
@@ -1735,7 +1740,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.14042cm</Width>
+                  <Width>2.24084cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1810,9 +1815,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataReciboPDF</DataSetName>
             <Top>2.55792cm</Top>
-            <Left>12.16264cm</Left>
+            <Left>8.86034cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.14042cm</Width>
+            <Width>2.24084cm</Width>
             <ZIndex>17</ZIndex>
             <Style>
               <Border>
@@ -1824,7 +1829,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.11396cm</Width>
+                  <Width>2.05563cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1899,9 +1904,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataReciboPDF</DataSetName>
             <Top>2.55792cm</Top>
-            <Left>8.49523cm</Left>
+            <Left>6.62832cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.11396cm</Width>
+            <Width>2.05563cm</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -1988,7 +1993,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataReciboPDF</DataSetName>
             <Top>2.55792cm</Top>
-            <Left>4.17233cm</Left>
+            <Left>2.57063cm</Left>
             <Height>0.6cm</Height>
             <Width>3.88125cm</Width>
             <ZIndex>19</ZIndex>
@@ -2070,6 +2075,130 @@
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox62">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Abonos u Otros</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox46</rd:DefaultName>
+            <Top>0.33459cm</Top>
+            <Left>11.27756cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.02542cm</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix15">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>4.02542cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox66">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Abonos_Otros.Value</Value>
+                                  <Style>
+                                    <Format>'$'#,0;('$'#,0)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox55</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Gray</Color>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Gray</Color>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>None</Style>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>es-CO</rd:FormatSymbolCulture>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Detalles16" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataReciboPDF</DataSetName>
+            <Top>1.11097cm</Top>
+            <Left>11.27764cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.02542cm</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>10.38641cm</Top>
@@ -2101,6 +2230,110 @@
           </TopBorder>
         </Style>
       </Rectangle>
+      <Tablix Name="Tablix14">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Reci_Num2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Mes_Pago.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Reci_Num</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalles14" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataReciboPDF</DataSetName>
+        <Top>1.6462cm</Top>
+        <Left>13.13507cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Mes Pago:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>1.6462cm</Top>
+        <Left>11.26121cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.87386cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>7.87744in</Height>
     <Style>
@@ -2214,10 +2447,18 @@
           <DataField>Banco_Id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Abonos_Otros">
+          <DataField>Abonos_Otros</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="Mes_Pago">
+          <DataField>Mes_Pago</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataRecibo</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ADMIN\source\repos\AlianzaV2\AlianzaPetrolera1\AlianzaPetrolera\RPTDataSet\DataRecibo.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Inetpub\wwwroot\Plataforma Alianza Petrolera\AlianzaV2\AlianzaPetrolera1\AlianzaPetrolera\RPTDataSet\DataRecibo.xsd</rd:SchemaPath>
         <rd:TableName>ReciboPDF</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

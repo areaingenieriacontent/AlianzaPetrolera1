@@ -533,20 +533,66 @@
         <Top>0.68474cm</Top>
         <Left>0.68474cm</Left>
         <Height>1.2cm</Height>
-        <Width>21.46875cm</Width>
+        <Width>21.46874cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Tablix Name="Tablix14">
+      <Textbox Name="Textbox126">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>IMPORTANTE !</Value>
+                <Style>
+                  <Color>Red</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">
+</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>Los estados del estudiante están definidos por medio de números, a continuación se indica el valor de cada uno.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox126</rd:DefaultName>
+        <Top>0.68474cm</Top>
+        <Left>22.97652cm</Left>
+        <Height>2.1875cm</Height>
+        <Width>5.25167cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix15">
         <TablixCorner>
           <TablixCornerRows>
             <TablixCornerRow>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox21">
+                  <Textbox Name="Textbox24">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -595,7 +641,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox145">
+                    <Textbox Name="Textbox146">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -633,7 +679,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox156">
+                    <Textbox Name="Textbox159">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -671,7 +717,7 @@
         <TablixColumnHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="ColumnGroup">
+              <Group Name="ColumnGroup2">
                 <GroupExpressions>
                   <GroupExpression />
                 </GroupExpressions>
@@ -679,7 +725,7 @@
               <TablixHeader>
                 <Size>0.6cm</Size>
                 <CellContents>
-                  <Textbox Name="Textbox22">
+                  <Textbox Name="Textbox23">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -719,7 +765,7 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="RowGroup">
+              <Group Name="RowGroup2">
                 <GroupExpressions>
                   <GroupExpression />
                 </GroupExpressions>
@@ -729,7 +775,7 @@
                   <TablixHeader>
                     <Size>2.62583cm</Size>
                     <CellContents>
-                      <Textbox Name="Textbox143">
+                      <Textbox Name="Textbox144">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
@@ -765,7 +811,7 @@
                   <TablixHeader>
                     <Size>2.62583cm</Size>
                     <CellContents>
-                      <Textbox Name="Textbox157">
+                      <Textbox Name="Textbox158">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
@@ -801,63 +847,17 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <Top>3.39947cm</Top>
+        <Top>3.26718cm</Top>
         <Left>22.97653cm</Left>
         <Height>1.8cm</Height>
         <Width>5.25166cm</Width>
-        <ZIndex>1</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox126">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>IMPORTANTE !</Value>
-                <Style>
-                  <Color>Red</Color>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve">
-</Value>
-                <Style />
-              </TextRun>
-              <TextRun>
-                <Value>Los estados del estudiante están definidos por medio de números, a continuación se indica el valor de cada uno.</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox126</rd:DefaultName>
-        <Top>0.68474cm</Top>
-        <Left>22.97652cm</Left>
-        <Height>2.1875cm</Height>
-        <Width>5.25167cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Color>LightGrey</Color>
-            <Style>Solid</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
     <Height>3.92708in</Height>
     <Style>

@@ -1,5 +1,4 @@
 ﻿function sumar() {
-
     var matricula = $(Matricula).val();
     var poliza = $(Poliza).val();
     var uniforme = $(Uniforme).val();
@@ -8,6 +7,8 @@
     var descpoli = $(DescPoli).val();
     var descunif = $(DescUnif).val();
     var descmensu = $(DescMensu).val();
+    var abonosuotros = $(Abonosuotros).val();
+
     var total = 0;
 
     var calmatri
@@ -18,6 +19,7 @@
     var finunif
     var calmensu
     var finmensu
+
 
 
     calmatri = ((matricula * descmatri) / 100);
@@ -32,7 +34,10 @@
     calmensu = ((mensualidad * descmensu) / 100);
     finmensu = (mensualidad - calmensu);
 
-    total = finmatri + finpoli + finunif + finmensu;
+    abonosuotros = abonosuotros * 1;
+
+    total = finmatri + finpoli + finunif + finmensu + abonosuotros;
+
 
 
     $(Total).val(total);
@@ -40,6 +45,8 @@
     $(CosPoli).val(finpoli);
     $(CosUnif).val(finunif);
     $(CosMensu).val(finmensu);
+
+
 
 
 }
@@ -54,11 +61,15 @@ function changesbank() {
         text1 = select1.options[select1.selectedIndex].innerText;
     $(Banco_Id).val(text1);
 
+    var select2 = document.getElementById("pago_mes"),
+        text2 = select2.options[select2.selectedIndex].innerText;
+    $(pago_mes_id).val(select2);
+
 
 }
 function agregar() {
 
-    document.getElementById("Text2").value = document.getElementById("Text1").value;
+    document.getElementById("Text1").value = document.getElementById("Text2").value
 
 }
 

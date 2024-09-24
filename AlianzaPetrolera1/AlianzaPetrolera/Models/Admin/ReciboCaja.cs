@@ -25,7 +25,10 @@ namespace AlianzaPetrolera.Models.Admin
         public string Reci_CateUs { get; set; }
         [Display(Name = "Fecha de Pago")]
         public DateTime Matr_Fecha { get; set; }
-        
+
+        [Display(Name = "Mes Pago")]
+        public string Mes_Pago { get; set; }
+
         [Display(Name = "Modo pago")]
         public string Reci_Mpago { get; set; }
         
@@ -49,6 +52,9 @@ namespace AlianzaPetrolera.Models.Admin
         public Nullable<float> Desc_Unif { get; set; }
         [Display(Name = "Descto. Mensualidad")]
         public Nullable<float> Desc_Mensu { get; set; }
+
+        [Display(Name = "Abonos u Otros")]
+        public Nullable<float> Abonos_Otros { get; set; }
 
         [Display(Name = "Total a Pagar")]
         public Nullable<float> Matri_CosTota { get; set; }
@@ -136,6 +142,10 @@ namespace AlianzaPetrolera.Models.Admin
             totaldesc = ((a * b) / 100);
             totalpag = (a - totaldesc);
             return totalpag;
+        }
+        public float AbonosUotros(float a)
+        {
+            return a;
         }
     }
 }
